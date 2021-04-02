@@ -7,8 +7,9 @@ server:
     enabled: true
 
 graphql:
-  servlet:
-    maxQueryDepth: 5
+  #servlet:
+  #    maxQueryDepth: 5
+  #    enabled: false
   playground:
     headers:
       Authorization: Bearer TOKEN
@@ -17,3 +18,6 @@ graphql:
         query: classpath:playground/bank_account.graphql
         variables: classpath:playground/bank_account_variables.json
     enabled: true
+
+voyager:
+  enabled: true
