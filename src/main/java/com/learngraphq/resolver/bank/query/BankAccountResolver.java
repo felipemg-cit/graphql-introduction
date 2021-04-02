@@ -1,4 +1,4 @@
-package com.learngraphq.resolver;
+package com.learngraphq.resolver.bank.query;
 
 import com.learngraphq.domain.bank.BankAccount;
 import com.learngraphq.domain.bank.Client;
@@ -16,7 +16,7 @@ public class BankAccountResolver implements GraphQLQueryResolver {
     public BankAccount bankAccount(UUID id){
         log.info("Retrieving bank account ID: {}", id);
 
-        var clientA = Client.builder()
+        /*var clientA = Client.builder()
                 .id(UUID.randomUUID())
                 .firstName("Wanilton")
                 .lastName("Filho")
@@ -31,11 +31,12 @@ public class BankAccountResolver implements GraphQLQueryResolver {
         clientA.setClient(clientB);
         clientB.setClient(clientA);
 
+        */
+
         return BankAccount.builder()
                 .id(id)
                 .currency(Currency.USD)
-                .client(clientB).
-                build();
+                .build();
     }
 
 }
