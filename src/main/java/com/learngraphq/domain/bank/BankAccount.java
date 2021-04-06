@@ -3,6 +3,7 @@ package com.learngraphq.domain.bank;
 import lombok.Builder;
 import lombok.Value;
 
+import java.util.List;
 import java.util.UUID;
 
 @Builder
@@ -11,4 +12,5 @@ public class BankAccount {
     UUID id;
     Currency currency;
     Client client;
+    Asset assets;
 }
